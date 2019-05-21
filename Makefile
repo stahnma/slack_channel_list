@@ -8,3 +8,6 @@ build: fmt
 
 install: build
 	sudo install -p -m755 slack_channel_list /usr/local/bin
+
+clean:
+	rm -f slack_channel_list
