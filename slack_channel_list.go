@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/nlopes/slack"
 	"os"
+	//    "github.com/kr/pretty"
 )
 
 func main() {
@@ -23,6 +24,9 @@ func main() {
 		return
 	}
 	for _, group := range groups {
-		fmt.Printf("ID: %s, Name: %s\n", group.ID, group.Name)
+		//pretty.Print(group)
+		if group.IsArchived == false {
+			fmt.Printf("ID: %s, Name: %s\n", group.ID, group.Name)
+		}
 	}
 }
